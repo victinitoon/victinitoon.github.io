@@ -1,0 +1,18 @@
+<script type="text/javascript"><!--
+mres = new Array();
+mcom = new Array();
+// おみくじの結果とコメント集
+mres[0] = '大吉'; mcom[0] = '今日はラッキーな日';
+mres[1] = '中吉'; mcom[1] = 'いいことあるかも？';
+mres[2] = '小吉'; mcom[2] = 'そこそこ良い日かも';
+mres[3] = ' 吉 '; mcom[3] = '頑張れば報われる？';
+mres[4] = '末吉'; mcom[4] = 'まあまあでしょう。';
+// 関数
+function ShowKuji(kRes,kCom) {
+   // くじを選ぶ
+   var kuji = Math.floor(Math.random()*mres.length);
+   // くじを表示
+   document.getElementById(kRes).innerHTML = mres[kuji];
+   document.getElementById(kCom).innerHTML = mcom[kuji];
+}
+// --></script>
