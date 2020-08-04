@@ -1,3 +1,4 @@
+<?php
 //API Key
 $header = array(
     "TRN-Api-Key:13f04252-afbb-44f1-a380-21c08889133a"
@@ -11,5 +12,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
  
 $response = curl_exec($ch);
 $profile = json_decode($response, true);
- 
+
+$tk = ($profile['data']['segments'][0]['stats']['kills']['value']);
+$td = ($profile["data"]["segments"][0]["stats"]["damage"]["value"]);
+
 curl_close($ch);
+?>
